@@ -1,5 +1,15 @@
-const hello = '';
+import express from 'express';
 
-console.log('Hello world!');
+const app = express();
+const port = 1234;
 
-            export default hello;
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+
+
+
