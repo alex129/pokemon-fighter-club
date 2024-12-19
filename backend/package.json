@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "tsc -w"
+    "dev": "ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,16 +16,11 @@
     "@tsconfig/node20": "^20.1.4",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
-    "@typescript-eslint/eslint-plugin": "^8.16.0",
-    "@typescript-eslint/parser": "^8.16.0",
-    "eslint": "^9.15.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.4.1",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.16.0"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.1"
   }
 }
