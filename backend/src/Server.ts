@@ -22,10 +22,10 @@ export default class Server {
 
   loadRoutes() {
     const router = express.Router();
-    this.express.use('/api', router);
     router.get('/', (req, res) => {
       res.send('Hello World!');
     });
+    this.express.use('/api', router);
   }
 
   async listen(): Promise<void> {
