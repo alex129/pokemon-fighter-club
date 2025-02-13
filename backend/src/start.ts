@@ -1,8 +1,7 @@
-import { PokemonFighterClub } from './PokemonFighterClub';
-import 'dotenv/config';
+import PokemonFighterClubApp from './PokemonFighterClubApp';
 
 try {
-  new PokemonFighterClub().start();
+  new PokemonFighterClubApp().start();
 } catch (error) {
   console.error('Error starting the server:', error);
 }
