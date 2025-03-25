@@ -8,13 +8,7 @@
     "dev": "ts-node src/start.ts",
     "build": "tsc -p tsconfig.prod.json && tsc-alias -p tsconfig.prod.json",
     "build:local": "tsc -p tsconfig.json && npm run build:clean",
-    "build:clean": "rm -r dist; exit 0",
-    "migration:dev": "prisma migrate dev --skip-seed",
-    "migration:create": "prisma migrate dev --create-only",
-    "migration:seed": "ts-node prisma/seeds/seed.ts",
-    "migration:generate": "prisma generate & prisma generate --schema=prisma/frenetic_online/schema.prisma",
-    "migration:deploy": "prisma migrate deploy",
-    "migration:refresh": "prisma migrate reset"
+    "build:clean": "rm -r dist; exit 0"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +20,8 @@
     "@types/node": "^22.10.1",
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.10",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "tsconfig-paths": "^4.2.0"
   },
   "dependencies": {
     "dotenv": "^16.4.7",

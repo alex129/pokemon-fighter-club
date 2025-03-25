@@ -4,6 +4,8 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import http, { Server as HttpServer } from 'http';
 import { AddressInfo } from 'net';
+import { authenticationRouter } from './infrastructure/routes/authentication';
+import errorHandler from './infrastructure/middlewares/ErrorHandler';
 
 export default class Server {
   private readonly express: express.Express;
@@ -22,9 +24,8 @@ export default class Server {
 
   loadRoutes() {
     const router = express.Router();
-    router.get('/', (req, res) => {
-      res.send('Hello World!');
-    });
+    router.get('/auth', authenticationRouter);
+    router.use(errorHandler);
     this.express.use('/api', router);
   }
 
