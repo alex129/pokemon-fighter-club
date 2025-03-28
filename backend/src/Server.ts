@@ -24,7 +24,7 @@ export default class Server {
 
   loadRoutes() {
     const router = express.Router();
-    router.get('/auth', authenticationRouter);
+    router.use('/auth', authenticationRouter);
     router.use(errorHandler);
     this.express.use('/api', router);
   }
