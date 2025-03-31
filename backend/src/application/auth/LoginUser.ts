@@ -1,6 +1,6 @@
 import { AuthService } from '@/domain/user/contracts/AuthService';
 import { Nullable } from '@/domain/shared/Nullable';
-import { AppError } from '@root/src/domain/shared/errors/AppError';
+import { AppError } from '@/domain/shared/errors/AppError';
 import httpStatus from 'http-status';
 
 export class LoginUser {
