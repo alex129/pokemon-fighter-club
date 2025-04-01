@@ -1,6 +1,6 @@
-import { Nullable } from '@/domain/shared/Nullable';
 import { AuthService } from '@/domain/user/contracts/AuthService';
 import { vi } from 'vitest';
+import { Nullable } from '@/domain/shared/Nullable';
 
 export default class AuthServiceMock implements AuthService {
   loginMock = vi.fn();
