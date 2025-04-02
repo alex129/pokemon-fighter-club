@@ -20,11 +20,5 @@
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.16.0"
   },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.49.1",
-    "cookie-parser": "^1.4.7",
-    "cors": "^2.8.5",
-    "http-status": "^2.1.0",
-    "zod": "^3.24.2"
-  }
+  "dependencies": {}
 }
