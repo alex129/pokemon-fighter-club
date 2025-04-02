@@ -24,9 +24,17 @@ jobs:
           cache: 'npm'
           cache-dependency-path: backend/package-lock.json
 
+      - name: Verify package-lock.json
+        working-directory: ./backend
+        run: |
+          if [ ! -f "package-lock.json" ]; then
+            echo "package-lock.json not found. Running npm install to generate it..."
+            npm install
+          fi
+
       - name: Install dependencies
         working-directory: ./backend
-        run: npm ci
+        run: npm install
 
       - name: Run tests
         working-directory: ./backend
