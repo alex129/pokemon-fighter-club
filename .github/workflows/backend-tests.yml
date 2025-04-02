@@ -20,7 +20,7 @@ jobs:
           node-version: lts/*
       - name: Install dependencies
         working-directory: ./backend
-        run: npm install
+        run: npm ci
         env:
           NODE_ENV: test
       - name: Run tests
