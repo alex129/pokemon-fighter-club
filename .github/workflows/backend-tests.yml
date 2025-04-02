@@ -25,6 +25,6 @@ jobs:
           NODE_ENV: test
       - name: Run tests
         working-directory: ./backend
-        run: cd backend && npm test
+        run: npm test
         env:
           NODE_ENV: test
