@@ -18,13 +18,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-      - name: Change to backend directory
-        run: cd backend
       - name: Install dependencies
+        working-directory: ./backend
         run: npm install
         env:
           NODE_ENV: test
       - name: Run tests
-        run: npm test
+        working-directory: ./backend
+        run: cd backend && npm test
         env:
           NODE_ENV: test
