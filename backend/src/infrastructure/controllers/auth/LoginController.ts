@@ -1,6 +1,6 @@
 import { LoginUser } from '@/application/auth/LoginUser';
+import { Config } from '@/config';
 import { AuthService } from '@/domain/user/contracts/AuthService';
-import { Config } from '@root/src/config';
 import { NextFunction, Request, Response } from 'express';
 import httpStatus from 'http-status';
 

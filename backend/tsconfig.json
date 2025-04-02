@@ -18,11 +18,10 @@
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "paths": {
-      "@root/*": ["./*"],
       "@/*": ["./src/*"],
       "@tests/*": ["./tests/*"]
     },
-    "types": []
+    "types": ["vitest/globals"]
   },
   "include": ["src/**/**.ts", "tests/**/**.ts"],
   "exclude": ["node_modules"],
